@@ -1,4 +1,4 @@
-# es-FileExplorer-3
+# ES-FileExplorer-3
 Last version of ES3 for all who hates ES4 with increased version code
 
 Hate ES File Explorer version 4? me too.
