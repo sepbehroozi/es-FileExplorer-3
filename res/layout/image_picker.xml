@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="-20.0dip" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/tool_switcher" android:layout_width="fill_parent" android:layout_height="@dimen/dp_46">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+            <TextView android:textSize="@dimen/dp_18" android:textColor="@color/black" android:gravity="center" android:id="@id/tool_local" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/location_local" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dp_18" android:textColor="@color/black" android:gravity="center" android:id="@id/tool_net" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/image_explore_net" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.estrongs.android.ui.navigation.TabIndicatorView android:id="@id/indicatorView" android:layout_width="fill_parent" android:layout_height="@dimen/dp_3" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:background="#ff31afde" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
+    <FrameLayout android:id="@id/contentPanel" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+        <com.estrongs.android.widget.RealViewSwitcher android:id="@id/content_main" android:persistentDrawingCache="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/gridview_files_local" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:id="@id/gridview_files_net" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.estrongs.android.widget.RealViewSwitcher>
+        <ProgressBar android:layout_gravity="center" android:id="@id/load_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+    </FrameLayout>
+</LinearLayout>
